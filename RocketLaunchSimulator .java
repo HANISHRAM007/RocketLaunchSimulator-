@@ -95,7 +95,6 @@ class Rocket {
                 stage, fuel, altitude, speed);
     }
 }
-
 public class RocketLaunchSimulator {
     
 
@@ -135,10 +134,15 @@ public class RocketLaunchSimulator {
                 case "s":
                     rocket.printStatus();
                     break;
-                
+                case "exit":
+                System.out.println("Exiting simulator.");
+                scanner.close();
+                System.exit(0);
+
             }
         }while(input!="exit");
 
-        scanner.close();
+    
     }
 }
+
